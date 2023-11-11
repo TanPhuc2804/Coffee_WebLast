@@ -1,0 +1,24 @@
+﻿body {
+}
+.text{
+    color:white;
+}
+.container{
+    backdrop-filter:blur(10px);
+    color:white;
+    height:auto;
+    font-size:30px;
+}
+table{
+    height:700px;
+}
+#btn{
+    border:1px solid white;
+    border-radius:10px;
+    padding:5px 25px;
+    color:white;
+    background-color:green;
+}
+#btn:hover{
+    color:black;
+}

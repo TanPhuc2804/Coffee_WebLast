@@ -1,0 +1,67 @@
+﻿@model Coffee_web.Models.Staff
+
+@{
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>FormLogin</title>
+    <link href="~/Content/Style/StyleSheet2.css" rel="stylesheet" />
+    <link href="~/Content/Style/Login.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Style/Register.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+   
+    @using (Html.BeginForm("Authen", "Login", FormMethod.Post))
+    {
+        <div class="container">
+            <p><h1 style="text-align: center; margin-top: 53px">Login</h1></p>
+            <table class="box-login">
+                <tr>
+                    <td>Nhap Id cua nhan vien: </td>
+                    <td class="form-text">@Html.TextBoxFor(m => m.id_staff)</td>
+                    <td style="color:red;"> @Html.ValidationMessageFor(m=>m.id_staff)</td>
+                </tr>        
+                <tr>
+                    <td>Nhap pass: </td>
+                    <td class="form-text">@Html.PasswordFor(m => m.password_staff, new { htmlAttributes = new { @class = "form-text" } })</td>
+                    <td>@Html.ValidationMessageFor(m => m.password_staff, "", new { @class = "text" })</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        @if (ViewBag.Login != null)
+                        {
+                            @ViewBag.Login;
+                        }
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="btnLogin" value="Login" class="button" />
+                    </td>
+                    <td colspan="2">
+                        <a href="@Url.Action("Register")" 
+                           style="
+                                  text-decoration:none;
+                                  color:white;
+                                  border:1px solid white;
+                                  border-radius:10px;
+                                  padding:5px 25px ;
+                                  background-color:black;
+                                  ">
+                        Đăng Ký</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+</body>
+</html>

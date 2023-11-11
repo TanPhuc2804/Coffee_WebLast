@@ -1,0 +1,259 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Coffee Website</title>
+    <link href="~/Content/Style/Main-layout.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="~/Content/Img-main-layout/logo1.png" />
+        </a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <ul class="navbar">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#products">Sản phẩm</a></li>
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="#customers">Khách hàng</a></li>
+                <li><a href="@Url.Action("FormLogin","Login")">Đăng nhập</a></li>
+            </ul>
+            <div class="header-icon">
+                <i class='bx bx-cart'></i>
+                <i class='bx bx-search' id="search-icon"></i>
+            </div>
+        
+        <div class="search-box">
+            <input type="search" name="" id="" placeholder="Search here...." />
+        </div>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Bắt đầu ngày mới của bạn <br />với 1 ly cf</h1>
+        </div>
+        <div class="home-img">
+            <img src="~/Content/Img-main-layout/main.png" align="right" alt=""/>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="heading">
+            <h2>Sản phẩm phổ biến</h2>
+        </div>
+        <div class="products-container">
+            <div class="box">
+                <img src="~/Content/Img/bac-siu-cafe-4.jpg" alt="" />
+                <h3>Bạc sỉu</h3>
+                <div class="content">
+                    <span>25.000VND</span><br />
+                    <br />
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/Cacao.jpg" alt="" />
+                <h3>Ca cao</h3>
+                <div class="content">
+                    <span>25.000VND</span><br />
+                    <br />
+                    
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/CafeSua.jpg" alt="" />
+                <h3>Cà phê sữa</h3>
+                <div class="content">
+                    <span>25.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/cam.jpg" alt="" />
+                <h3>Nước cam</h3>
+                <div class="content">
+                    <span>25.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/choco.jpg" alt="" />
+                <h3>Choco</h3>
+                <div class="content">
+                    <span>35.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/CafeDa.jpg" alt="" />
+                <h3>Cà phê đen</h3>
+                <div class="content">
+                    <span>20.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/Latte.jpg" alt="" />
+                <h3>Latte</h3>
+                <div class="content">
+                    <span>30.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/EpDuaHau.jpg" alt="" />
+                <h3>Nước ép dưa hấu</h3>
+                <div class="content">
+                    <span>25.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/EpOi.jpg" alt="" />
+                <h3>Nước ép ổi</h3>
+                <div class="content">
+                    <span>25.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/EpTao.jpg" alt="" />
+                <h3>Nước ép táo</h3>
+                <div class="content">
+                    <span>25.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/SinhToBo.jpeg" alt="" />
+                <h3>Sinh tố bơ</h3>
+                <div class="content">
+                    <span>35.000VND</span><br />
+                    <br />
+                  
+                </div>
+            </div>
+            <div class="box">
+                <img src="~/Content/Img/SinhToChuoi.jpg" alt="" />
+                <h3>Sinh tố chuối</h3>
+                <div class="content">
+                    <span>35.000VND</span><br />
+                    <br />
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="~/Content/Img-main-layout/about1.jpg" align="left" alt=""/>
+        </div>
+        <div class="about-text">
+            <h2>Về chúng tôi</h2>
+            <p>Sau đây là lịch sử về quán cf của chúng tôi</p>
+            <p>Quán cf của chúng tôi được hình thành vào năm 2023</p>
+            <p>Và đến nay chưa bán được ly cf nào</p>
+            <a href="#" class="btn">Tìm hiểu thêm</a>
+        </div>
+    </section>
+    <section class="customers" id="customers">
+        <div class="heading">
+            <h2>Đánh giá của khách hàng</h2>
+        </div>
+        <div class="customers-container">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Cappuccino rất ngon xứng đáng được 5 sao</p>
+                <h2>Phan Tấn Phúc</h2>
+                <img src="~/Content/Img-main-layout/Phuc.jpg" alt="" />
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Không gian quán rất là đẹp và sạch sẽ</p>
+                <h2>Hoàng Huy</h2>
+                <img src="~/Content/Img-main-layout/Huy.jpg" alt="" />
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Các món nước ở đây rất ngon</p>
+                <h2>Phú Tài</h2>
+                <img src="~/Content/Img-main-layout/pirate-captain-1337764.png" alt="" />
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Nhân viên phục vụ rất nhiệt tình và dễ thương</p>
+                <h2>Thành viên ẩn danh</h2>
+                <img src="~/Content/Img-main-layout/anhandanh.png" alt=""/>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-box">
+            <h2>Quán CF</h2>
+            <p>Liên hệ với chúng tôi</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Hỗ trợ</h3>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Trợ giúp</a></li>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Liên hệ</h3>
+            <div class="contact">
+                <span><i class='bx bx-map'></i>828 Sư Vạn Hạnh F10 Q.10 TP.HCM</span>
+                <span><i class='bx bx-phone'></i>0123456789</span>
+                <span><i class='bx bx-envelope'></i>CoffeeShop@gmail.com</span>
+            </div>
+        </div>
+    </section>
+    <div class="copy">
+        <p>&copy; @DateTime.Now.Year - Quán CF 3 thành viên</p>
+    </div>
+    
+
+    <script src="~/Scripts/Scripts/main.js"></script>
+</body>
+</html>

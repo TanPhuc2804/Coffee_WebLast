@@ -1,0 +1,98 @@
+﻿@model Coffee_web.Models.Product
+
+@{
+
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+<style>
+    .form-horizontal {
+        color: white;
+        font-size:20px;
+        height:600px;
+    }
+    #back{
+        color:red;
+    }
+</style>
+
+<link href="~/Content/Style/StyleSheet2.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.bundle.min.js"></script>
+@using (Html.BeginForm())
+{
+    <h2>Edit</h2>
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Product</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_product, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.id_product, new { htmlAttributes = new { @class = "form" } })
+                @Html.ValidationMessageFor(model => model.id_product, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.name_product, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.name_product, new { htmlAttributes = new { @class = "form" } })
+                @Html.ValidationMessageFor(model => model.name_product, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.price, new { htmlAttributes = new { @class = "form" } })
+                @Html.ValidationMessageFor(model => model.price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.introduce_product, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.introduce_product, new { htmlAttributes = new { @class = "form" } })
+                @Html.ValidationMessageFor(model => model.introduce_product, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_catogory, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.id_catogory, new { htmlAttributes = new { @class = "form" } })
+                @Html.ValidationMessageFor(model => model.id_catogory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.num, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.num, new { htmlAttributes = new { @class = "form" } })
+                @Html.ValidationMessageFor(model => model.num, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Images, new { htmlAttributes = new { @class = "form" } })
+                @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" style="height: 47px; width: 115px; margin-top: 20px; text-align:center; font-size:20px;"/>
+            </div>
+        </div>
+    </div>
+}
+
+<div style="margin-bottom:20px;">
+    @Html.ActionLink("Back to List", "Manager", new {@id="back"}, new { @class = "btn btn-danger" })
+</div>
+
+

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Coffee_web.Models.Order>
+
+    @{double total = 0;}
+@foreach (var item in Model)
+{
+    if (item.tick == "0")
+    {
+        total = total - item.price_total.Value;
+    }
+
+
+
+}
+<div>@total</div>

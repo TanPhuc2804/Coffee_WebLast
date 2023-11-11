@@ -1,0 +1,70 @@
+﻿table tr td{
+    border:1px solid white;
+}
+td{
+    height:50px;
+}
+.btn-create{
+    border:1px solid black;
+    padding: 10px 20px;
+    margin-left:20px;
+    background-color:black;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+}
+#btn_contet{
+    width:500px;
+    text-align:center;
+}
+.btn{
+    border:1px solid black;
+    border-radius:10px;
+    padding: 10px 20px;
+    margin-right:20px;
+    text-decoration:none;
+    color:White;
+    background-color:red;
+}
+
+.btn-edit {
+    background-color: #008000;
+}
+.btn-Delete {
+    background-color: #FFD700;
+}
+
+.control-label{
+    font-size:30px !important;
+}
+.form-control{
+    height:50px;
+    width:300px;
+}
+#box {
+    backdrop-filter: blur(10px);
+    padding-left: 30px;
+}
+#form input{
+    margin-left:80px;
+}
+.btn-default {
+    display:inline;
+    padding: 30px 58px;
+    margin-left: 30px;
+    font-size:20px;
+}
+.back {
+    text-align: center;
+    display: block;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius:10px;
+    margin-top: 50px;
+    width: 200px;
+    color:white;
+}
+
+.form-control {
+    font-size: 30px;
+}

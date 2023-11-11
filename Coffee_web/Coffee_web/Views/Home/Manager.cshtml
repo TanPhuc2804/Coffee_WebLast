@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Coffee_web.Models.Order>
+
+@{
+    ViewBag.Title = "Manager";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+@{
+    double total = 0;
+    double total_notbuy = 0;
+    int count_takeAway = 0;
+    int count_atShopp = 0;
+    int count_Shope = 0;
+}
+
+@foreach (var item in Model)
+{
+    if (item.tick == "0")
+    {
+        total_notbuy += item.price_total.Value;
+
+    }
+
+    if (item.IsType == "Mang_di")
+    {
+        count_takeAway++;
+    }
+    else if (item.IsType == "Tai_quan")
+    {
+        count_atShopp++;
+    }
+    else if (item.IsType == "Shopee")
+    {
+        count_Shope++;
+    }
+    total += item.price_total.Value;
+}
+
+<style>
+    table tr td, table tr th {
+        border: 1px solid;
+        border-top: none;
+        border-bottom: none;
+        padding: 10px 20px;
+    }
+
+    table tr th, .sp-dat {
+        border: 1px solid;
+    }
+</style>
+<link href="~/Content/Style/StyleSheet2.css" rel="stylesheet" />
+<div id="left">
+    <h1>Danh sách các mặt hàng bán chạy nhất: </h1>
+    <table id="form-check" cellspacing="20" style="margin: 0px; border-collapse: collapse;">
+        <tr>
+            <th>Bán chạy nhất</th>
+            <th>Số lượng bán</th>
+            <th>7 ngày gần nhất</th>
+        </tr>
+        <tr>
+            <td class="sp-dat">Cafe</td>
+            <td class="sp-dat">400</td>
+            <td class="sp-dat">10.000.000đ</td>
+        </tr>
+        <tr>
+            <td class="sp-dat">Cafe</td>
+            <td class="sp-dat">400</td>
+            <td class="sp-dat">10.000.000đ</td>
+        </tr>
+        <tr>
+            <td class="sp-dat">Cafe</td>
+            <td class="sp-dat">400</td>
+            <td class="sp-dat">10.000.000đ</td>
+        </tr>
+        <tr>
+            <td class="sp-dat">Cafe</td>
+            <td class="sp-dat">400</td>
+            <td class="sp-dat">10.000.000đ</td>
+        </tr>
+        <tr>
+            <td class="sp-dat">Cafe</td>
+            <td class="sp-dat">400</td>
+            <td class="sp-dat">10.000.000đ</td>
+        </tr>
+    </table>
+</div>
+<div id="content">
+    <div class="Manager-first">
+        <h1>Theo dõi tình hình doanh thu ngày @DateTime.Today.Day/@DateTime.Today.Month/@DateTime.Today.Year </h1>
+        <div class="solid"></div>
+        <div id="bill-current">
+            Hóa đơn hiện tại @DateTime.Today
+            <p>@total_notbuy</p>
+            <p>Tông phải thu</p>
+            <table cellspacing="20">
+                <tr>
+                    <td>
+                        <p class="number">@count_atShopp </p>
+                        <p class="Conten-of-number">Dùng tại quán</p>
+                    </td>
+                    <td>
+                        <p class="number">@count_takeAway </p>
+                        <p class="Conten-of-number">Mang về</p>
+                    </td>
+                    <td>
+                        <p class="number">@count_Shope </p>
+                        <p class="Conten-of-number">Shopee</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="solid"></div>
+        <div id="revenue">
+            Doanh thu ngày @DateTime.Today
+            <p>@total</p>
+            <p>Tổng thu</p>
+        </div>
+        <div class="solid"></div>
+        <div id="nav-product">
+            Các loại danh mục nổi bật nhất là :
+            <table cellspacing="20">
+                <tr>
+                    <td>
+                        <p class="number catagory">Cafe:  </p>
+                        <p class="Conten-of-number"> 62,4%</p>
+                    </td>
+                    <td>
+                        <p class="number catagory">Sweet Water:<p class="Conten-of-number">8,48%</p>
+
+                    </td>
+                    <td>
+                        <p class="number catagory">Tea </p>
+                        <p class="Conten-of-number">6.93%</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,48 @@
+﻿body {
+   
+}
+
+form {
+
+    color: white;
+    height: 100%;
+   
+}
+.container {
+    width: 400px;
+    border:1px solid black;
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+
+}
+.box-login {
+    font-size: 30px;
+    border: none;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.from-text{
+    text-decoration:none;
+    border:none;    
+    border-radius:10px;
+}
+
+table tr{
+    margin-top:10px;
+}
+.button {
+    border: 1px solid black;
+    padding: 5px 25px;
+    color:white;
+    background:green;
+    border-radius:10px;
+}
+a{
+    text-decoration:none;
+    color:white;
+
+}
+table tr td a:hover{
+    color:red;
+}

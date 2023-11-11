@@ -1,0 +1,68 @@
+﻿@model Coffee_web.Models.Customer
+
+@{
+    ViewBag.Title = "AddCus";
+    Layout = "~/Views/Shared/_LayoutCreate.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.bundle.min.js"></script>
+<style>
+    div{
+        text-align:center;
+        align-items:center;
+    }
+    table tr td{
+        text-align:center;
+        margin:0 auto;
+        
+    }
+
+    table{
+        margin:auto;
+    }
+</style>
+@using (Html.BeginForm("AddCus", "AddCustomer", FormMethod.Post))
+{
+    <h2>AddCus</h2>
+    <div>
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td>@Html.TextBoxFor(m => m.id_customer)</td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.id_customer)
+                    @if (ViewBag.error != null)
+                    {
+                        <h5>@ViewBag.error</h5>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>Number:</td>
+                <td>@Html.TextBoxFor(m => m.number_phone)</td>
+                <td>@Html.ValidationMessageFor(m => m.number_phone)</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>@Html.TextBoxFor(m => m.email)</td>
+                <td>@Html.ValidationMessageFor(m => m.email)</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="submit" value="Dang ky" class="btn btn-success" onclick=" return  confirm('Register successfull...') " />
+                </td>
+
+            </tr>
+        </table>
+    </div>
+}
+
+<div>
+    <button onclick="goBack()" class="btn btn-primary">Back to ProductClient</button>
+</div>
+
+<script>
+    function goBack() {
+        window.location.href = '@Url.Action("Show", "ShoppingCart")';
+    }
+</script>

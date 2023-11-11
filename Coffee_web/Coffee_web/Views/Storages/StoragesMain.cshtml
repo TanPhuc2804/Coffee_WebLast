@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Coffee_web.Models.Storages>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+<link href="~/Content/Style/StyleSheet2.css" rel="stylesheet" />
+<link href="~/Content/Style/StyleStorage.css" rel="stylesheet" />
+
+<div id="Box">
+    <h2 style="text-align:center;">Hàng tồn kho</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = " btn-create" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.images)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Num)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content(item.images)" height="100" width="100" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Num)
+                </td>
+                <td id="btn_contet">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "btn btn-edit" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductID }, new { @class = "btn btn-details" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProductID }, new { @class = "btn btn-Delete" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div>
+        <a href="https://localhost:44309/Home/Manager" 
+           style=" border:1px solid white;
+                   border-radius:10px;
+                   background-color:green;
+                   color:white;
+                   padding:20px 30px;
+                   text-decoration:none;
+                   font-size:30px;
+                   margin-top:20px; 
+                   
+    
+    ">Back to Manager</a>
+    </div>
+</div>

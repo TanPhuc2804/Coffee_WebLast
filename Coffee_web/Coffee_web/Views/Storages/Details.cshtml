@@ -1,0 +1,60 @@
+﻿@model Coffee_web.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+<style>
+    .btn-edit, .btn-back {
+        text-decoration: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color:white;
+    }
+    .btn-back{
+        background-color:red;
+    }
+</style>
+<h2>Details</h2>
+<link href="~/Content/Style/StyleSheet2.css" rel="stylesheet" />
+<link href="~/Content/Style/StyleStorage.css" rel="stylesheet" />
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.id_product)</b>:   @Html.DisplayFor(model => model.id_product)
+        </dt>
+        <hr />
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.name_product):</b> @Html.DisplayFor(model => model.name_product)
+        </dt>
+        <hr />
+        <dt>
+            <b> @Html.DisplayNameFor(model => model.price)</b>: @Html.DisplayFor(model => model.price)
+        </dt>
+        <hr />
+        <dt>
+            <b>  @Html.DisplayNameFor(model => model.introduce_product)</b>: @Html.DisplayFor(model => model.introduce_product)
+        </dt>
+        <hr />
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.id_catogory) </b>:  @Html.DisplayFor(model => model.id_catogory)
+        </dt>
+        <hr />
+
+        <dt>
+            <b>   @Html.DisplayNameFor(model => model.num)</b>: @Html.DisplayFor(model => model.num)
+        </dt>
+        <hr />
+
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_product }, new {@class="btn-edit"}) |
+    @Html.ActionLink("Back to List", "StoragesMain",null, new { @class = "btn-back" })
+</p>

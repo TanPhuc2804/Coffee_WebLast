@@ -1,0 +1,75 @@
+﻿@model Coffee_web.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+<link href="~/Content/Style/StyleSheet2.css" rel="stylesheet" />
+<link href="~/Content/Style/StyleStorage.css" rel="stylesheet" />
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name_product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.introduce_product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.introduce_product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_catogory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_catogory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Manager", null, new { @class = "back" })
+        </div>
+    }
+</div>
